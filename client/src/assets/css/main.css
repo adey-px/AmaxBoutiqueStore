@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+html {  
+  font-size: 62.5%; /* use 10px for 1rem */
+}  /* 62.5 x 16px = 10px = 1rem */
+
+body {
+  margin: 0;
+  height: 100vh;
+  font: 1.6rem Helvetica, Arial;
+}
+
+/* body grid with three areas */
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+    'header' /* body elements in index */
+    'main' 
+    'footer';
+  grid-template-columns: 1fr; /* 1 fragment */
+  grid-template-rows: 5rem 1fr 5rem; /* for body elements */
+  height: 100%;
+}
+
+/* header area */
+header {
+  grid-area: header;
+  display: flex;
+  align-items: center; /* vertically centered */
+  justify-content: space-between; /* stretch end-to-end */
+  color: #fff;
+  padding: 0.5rem;
+  background: #203040;
+}
+
+header a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+header a:hover {
+  color: #f08040;
+}
+
+.brand a {
+  font-size: 3rem;
+}
+
+/* footer area */
+footer {
+  display: flex;
+  align-items: center; /* vertically centered */
+  justify-content: center; /* place mid-point */
+  color: #fff;
+  background: #203040;
+}
