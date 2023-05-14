@@ -2,9 +2,10 @@
   box-sizing: border-box;
 }
 
+/* global style settings */
 html {  
   font-size: 62.5%; /* use 10px for 1rem */
-}  /* 62.5 x 16px = 10px = 1rem */
+}                   /* 62.5 x 16px = 10px = 1rem */
 
 body {
   margin: 0;
