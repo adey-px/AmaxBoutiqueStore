@@ -23,7 +23,7 @@ a:hover {
 }
 
 /* body grid with three areas */
-.grid-container {
+.grid {
   display: grid; 
   grid-template-areas: 'header' 'main' 'footer';
   grid-template-columns: 1fr; /* 1 fragment */
