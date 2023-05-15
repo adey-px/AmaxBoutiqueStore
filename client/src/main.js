@@ -1,5 +1,5 @@
 'use strict';
-import HomePage from './feeders/Home.js';
+import Home from './feeders/Home.js';
 import Product from './feeders/Product.js';
 import { requestUrl } from './helpers/Utils.js';
 import { Error404 } from './helpers/Error404.js';
@@ -7,30 +7,33 @@ import { Error404 } from './helpers/Error404.js';
 script link as type module in index.html
 */
 
-// Define route paths
+//
 const routes = {
-	'/': HomePage,
-	'/product/:id': Product,
+	'/': Home,
+	'/products': Home,
+	'/products/product/:id': Product,
 };
 
-//
+// Routing logic for request object from Utils.js
 const router = () => {
 	const request = requestUrl();
-
-	const parsedUrl =
-		(request.resource ? `/${request.resource}` : '/') +
+	const parseUrl =
+		(request.root ? `/${request.root}` : '/') +
+		(request.base ? `/${request.base}` : '') +
 		(request.id ? '/:id' : '') +
 		(request.verb ? `/${request.verb}` : '');
 
-	const checkedUrl = routes[parsedUrl] ? routes[parsedUrl] : Error404;
+	/* if url not exist, return error page */
+	const checkUrl = routes[parseUrl] ? routes[parseUrl] : Error404;
 
+	/* render template logic with routing */
 	const main = document.getElementById('container');
-	main.innerHTML = checkedUrl.render();
+	main.innerHTML = checkUrl.render();
 
-	/* render all products data in home page */
-	// main.innerHTML = HomePage.render();
+	/* render home template without routing */
+	// main.innerHTML = Home.render();
 };
 
 // Event listeners
 window.addEventListener('load', router);
-window.addEventListener('hashchange', router)
+window.addEventListener('hashchange', router);

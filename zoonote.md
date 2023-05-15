@@ -5,3 +5,6 @@
   & port, thereby skipping long file paths in browser address bar
 - Main.js contains core logic & routes running in Client
 - Files in feeders folder supplies strings in templates
+
+### To do
+Find out where /#/ is affecting the url, remove it

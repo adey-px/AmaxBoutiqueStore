@@ -4,14 +4,15 @@ Routing & Rendering logic for main.js
 // get incoming request url 
 export const requestUrl = () => {
 	const url = document.location.hash.toLowerCase();
-	const request = url.split('/');
+	const path = url.split('/');
 
-	/* divisions of route in main.js/routes */
-  /* as in -eg- resource/:id/action */
+	/* divisions of route in main.js routes */
+  /* as in -eg- root/base/:id/verb */
 	return {
-		resource: request[1],
-		id: request[2],
-		verb: request[3],
+		root: path[1],
+		base: path[2],
+		id: path[3],
+		verb: path[4],
 	};
 };
 
