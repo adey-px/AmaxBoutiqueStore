@@ -1,3 +1,4 @@
+'use strict';
 import data from '../datastore/clothes.js';
 // import { getProducts } from '../api';
 // import { parseRequestUrl } from '../utils';
@@ -7,7 +8,6 @@ import data from '../datastore/clothes.js';
 const HomePage = {
 	render: () => {
 		const { products } = data;
-		console.log(products);
 		// const { value } = parseRequestUrl();
 		// const PRODUCTS = await getProducts({ searchKeyword: value });
 
