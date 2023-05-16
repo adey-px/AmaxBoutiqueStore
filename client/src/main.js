@@ -15,7 +15,7 @@ const routes = {
 };
 
 // Routing logic for request object from Utils.js
-const router = () => {
+const router = async () => {
 	const request = requestUrl();
 	const parseUrl =
 		(request.root ? `/${request.root}` : '/') +
@@ -28,7 +28,7 @@ const router = () => {
 
 	/* render template logic with routing */
 	const main = document.getElementById('container');
-	main.innerHTML = checkUrl.render();
+	main.innerHTML = await checkUrl.render();
 
 	/* render home template without routing */
 	// main.innerHTML = Home.render();

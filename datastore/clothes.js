@@ -1,5 +1,9 @@
 /*
-Data object for Home page
+Data object array for Home page
+- Extract data as below:
+- import data from './datastore/clothes.js';
+- const {products} = data, to use products in template 
+- option: check console.log(data.products) to get data
 */
 export default {
 	products: [

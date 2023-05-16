@@ -1,5 +1,6 @@
 ### Amax Boutique Store
 Fully functional and real-world ecommerce website built entirely with 
-JavaScript stack. Its frontend is pure JS and its backend logic is 
-Node.js. Shoppers are able to browse all available items in the store, select 
-items into their carts and complete test payment with stripe system. 
+JavaScript stack. Its frontend logic is JavaScript, HTML & CSS and its backend 
+api is built with Node.js & Express framework. Shoppers are able to browse all 
+available items in the store, select items into their carts and complete test 
+payment with stripe payment system. 

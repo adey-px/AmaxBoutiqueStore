@@ -1,10 +1,17 @@
 'use strict';
-import data from '../datastore/clothes.js';
 
 // Logic object for Home template
 const Home = {
-	render: () => {
-		const { products } = data;
+	render: async () => {
+		/* fetch data from backend api */
+		const response = await fetch('http://localhost:5000', {
+			headers: { 'Content-Type': 'application/json' },
+		});
+
+		if (!response || !response.ok) {
+			return `<div>Fatal error, no data found!</div>`;
+		}
+		const products = await response.json();
 
 		return `
       <ul class="products">
@@ -37,7 +44,7 @@ const Home = {
 };
 
 /* 
-join() prevnt coma ',' at end of each product in ui 
+join() prevent coma ',' at end of each product in ui 
 */
 // export to import in app.js
 export default Home;
