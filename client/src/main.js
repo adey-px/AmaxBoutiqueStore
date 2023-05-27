@@ -4,7 +4,8 @@ import Product from './feeders/Product.js';
 import { requestUrl } from './helpers/Utils.js';
 import { Error404 } from './helpers/Error404.js';
 /*
-script link as type module in index.html
+- script link as type module in index.html
+- live server home runs on localhost:8080
 */
 
 //

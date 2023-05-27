@@ -1,6 +1,6 @@
 import express from 'express';
-import data from './datastore/clothes.js';
 import cors from 'cors';
+import DATA from './datastore/data.js';
 // import mongoose from 'mongoose';
 // import bodyParser from 'body-parser';
 // import path from 'path';
@@ -13,14 +13,13 @@ import cors from 'cors';
 //
 const app = express();
 
-// client & server connection
+// Connect client-server
 app.use(cors());
 
-//
+// Home route sending data to client
 app.get('/', (req, res) => {
-	res.send(data.products)
+	res.send(DATA.products)
 });
-
 
 // parse incoming request
 // app.use(bodyParser.json());

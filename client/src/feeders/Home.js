@@ -3,7 +3,6 @@
 // Logic object for Home template
 const Home = {
 	render: async () => {
-		/* fetch data from backend api */
 		const response = await fetch('http://localhost:5000', {
 			headers: { 'Content-Type': 'application/json' },
 		});
@@ -11,6 +10,8 @@ const Home = {
 		if (!response || !response.ok) {
 			return `<div>Fatal error, no data found!</div>`;
 		}
+
+		/* data fetched above from backend api */
 		const products = await response.json();
 
 		return `
