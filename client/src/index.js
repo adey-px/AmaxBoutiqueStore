@@ -14,7 +14,7 @@ const routes = {
 	'/products/product/:id': Product,
 };
 
-// Routing logic for request object in Utils.js
+// Route logic for request object in Utils.js
 const router = async () => {
 	const request = requestUrl();
 	const parseUrl =
@@ -26,7 +26,7 @@ const router = async () => {
 	/* if url not exist, return error page */
 	const checkUrl = routes[parseUrl] ? routes[parseUrl] : Error404;
 
-	/* render index template  with routing */
+	/* render index template with routing */
 	const home = document.getElementById('container');
 	home.innerHTML = await checkUrl.render();
 
