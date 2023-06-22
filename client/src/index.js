@@ -1,21 +1,20 @@
 'use strict';
-import Home from './feeders/Home.js';
-import Product from './feeders/Product.js';
+import Home from './screens/Home.js';
+import Product from './screens/Product.js';
 import { requestUrl } from './helpers/Utils.js';
 import { Error404 } from './helpers/Error404.js';
 /*
 - script link as type module in index.html
-- live server home runs on localhost:8080
 */
 
-//
+// Set routes with js files in screens/
 const routes = {
 	'/': Home,
 	'/products': Home,
 	'/products/product/:id': Product,
 };
 
-// Routing logic for request object from Utils.js
+// Routing logic for request object in Utils.js
 const router = async () => {
 	const request = requestUrl();
 	const parseUrl =
@@ -27,12 +26,12 @@ const router = async () => {
 	/* if url not exist, return error page */
 	const checkUrl = routes[parseUrl] ? routes[parseUrl] : Error404;
 
-	/* render template logic with routing */
-	const main = document.getElementById('container');
-	main.innerHTML = await checkUrl.render();
+	/* render index template  with routing */
+	const home = document.getElementById('container');
+	home.innerHTML = await checkUrl.render();
 
-	/* render home template without routing */
-	// main.innerHTML = Home.render();
+	/* render index template without routing */
+	// home.innerHTML = Home.render();
 };
 
 // Event listeners

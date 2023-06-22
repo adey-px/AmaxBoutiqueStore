@@ -1,18 +1,20 @@
 'use strict';
+import axios from 'axios';
 
-// Logic object for Home template
+// Object for Home page render
 const Home = {
 	render: async () => {
-		const response = await fetch('http://localhost:5000', {
+		const response = await axios({
+			url: 'http://localhost:5000',
 			headers: { 'Content-Type': 'application/json' },
 		});
 
-		if (!response || !response.ok) {
-			return `<div>Fatal error, no data found!</div>`;
+		if (!response || response.statusText !== 'OK') {
+			return `<div>No product data to show</div>`;
 		}
 
 		/* data fetched above from backend api */
-		const products = await response.json();
+		const products = response.data;
 
 		return `
       <ul class="products">
