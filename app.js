@@ -10,13 +10,13 @@ import DATA from './datastore/data.js';
 // import productRouter from './routers/productRouter';
 // import uploadRouter from './routers/uploadRouter';
 
-//
+// Instance of express app
 const app = express();
 
-// Connect client-server
+// Enable client-server connection
 app.use(cors());
 
-// Home route sending data to client
+// Home api sending data to client
 app.get('/', (req, res) => {
 	res.send(DATA.products)
 });
@@ -63,5 +63,5 @@ app.get('/', (req, res) => {
 
 // Server config
 app.listen('5000', () => {
-	console.log('Started Dev server at http://localhost:5000');
+	console.log('Started server at http://localhost:5000');
 });
