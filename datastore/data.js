@@ -1,11 +1,11 @@
 /*
-Data object array for Home page
+Object with data array for products
 Extract data as below:
-- import DATA from './datastore/data.js';
+- set import {DATA} in './datastore/data.js';
 - const {products} = DATA, to use products in template 
 - option: check console.log(data.products) to get data
 */
-export default {
+export const DATA = {
 	products: [
 		{
 			_id: '1',
@@ -55,7 +55,7 @@ export default {
 			_id: '5',
 			name: 'Apex designer leggy',
 			category: 'Shirts',
-			image: '/assets/img/product-5.jpg', 
+			image: '/assets/img/product-5.jpg',
 			price: 180,
 			brand: 'Apex',
 			countInStock: 10,

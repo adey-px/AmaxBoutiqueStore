@@ -8,7 +8,7 @@ import { Error404 } from './helpers/Error404.js';
 - live server home runs on localhost:8080
 */
 
-//
+// API - matched with their logic files
 const routes = {
 	'/': Home,
 	'/products': Home,

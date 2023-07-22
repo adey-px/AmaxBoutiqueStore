@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import DATA from './datastore/data.js';
+import { DATA } from './datastore/data.js';
 // import mongoose from 'mongoose';
 // import bodyParser from 'body-parser';
 // import path from 'path';
@@ -9,16 +9,16 @@ import DATA from './datastore/data.js';
 // import orderRouter from './routers/orderRouter';
 // import productRouter from './routers/productRouter';
 // import uploadRouter from './routers/uploadRouter';
-
-//
+/*
+ */
 const app = express();
 
-// Connect client-server
+// Set data flow across diff ports
 app.use(cors());
 
 // Home route sending data to client
 app.get('/', (req, res) => {
-	res.send(DATA.products)
+	res.send(DATA.products);
 });
 
 // parse incoming request
@@ -61,7 +61,7 @@ app.get('/', (req, res) => {
 // 		console.log(error.reason);
 // 	});
 
-// Server config
+// Configure server
 app.listen('5000', () => {
-	console.log('Started Dev server at http://localhost:5000');
+	console.log('**Started server on http://localhost:5000');
 });

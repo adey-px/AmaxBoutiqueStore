@@ -1,6 +1,6 @@
 'use strict';
 
-// Logic object for Home template
+// Object for Home page render
 const Home = {
 	render: async () => {
 		const response = await fetch('http://localhost:5000', {
