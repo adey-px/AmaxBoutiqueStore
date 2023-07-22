@@ -16,7 +16,7 @@ const app = express();
 // Set data flow across diff ports
 app.use(cors());
 
-// Home route sending data to client
+// Home api sending data to client
 app.get('/', (req, res) => {
 	res.send(DATA.products);
 });
