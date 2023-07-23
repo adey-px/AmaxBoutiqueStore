@@ -6,5 +6,7 @@ available items in the store, select items into their carts and complete test
 payment with stripe payment system. 
 
 ### Other Technologies
-* Webpack, Webpack CLI, & Webpack dev-server
+Webpack
+Webpack CLI
+Webpack dev-server
 

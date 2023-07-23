@@ -7,11 +7,7 @@ import { Error404 } from './helpers/Error404.js';
 - script link as type module in index.html
 */
 
-<<<<<<< HEAD:client/src/main.js
 // API - matched with their logic files
-=======
-// Set routes with js files in screens/
->>>>>>> fc0a992d6f052ee1e0e210bffbb395542d364d5e:client/src/index.js
 const routes = {
 	'/': Home,
 	'/products': Home,
