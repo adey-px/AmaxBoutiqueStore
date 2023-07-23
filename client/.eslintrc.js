@@ -1,15 +1,16 @@
 /*
-Avoid 'Parsing error: The keyword 'import' is reserved' by ESlint
+To avoid 'Parsing error: The keyword 'import' is reserved' by ESlint
 - line 14 informs ESlint that the project files are module
 - option: use commonjs 'require() & module.exports to export files
 */
-module.exports = {
+export default {
+	root: true,
 	env: {
 		browser: true,
 		node: true,
 		es2020: true,
 	},
-	extends: ['prettier'],
+	extends: ['eslint:recommended', 'prettier'],
 	parserOptions: {
 		sourceType: 'module',
 		ecmaVersion: 11,

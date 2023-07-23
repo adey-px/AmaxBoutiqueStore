@@ -1,28 +1,29 @@
 {
-  "name": "amaxboutiquestore",
+  "name": "vanilla-boutique-server",
   "version": "1.0.0",
-  "description": "Amax Boutique Store",
+  "description": "Vanilla Stack Boutique",
   "main": "app.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adey-px/AmaxEcommerceStore.git"
+    "url": "git+https://github.com/adey-px/VanilaStackBoutique.git"
   },
   "author": "Oreofe Stephen",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/adey-px/AmaxEcommerceStore/issues"
+    "url": "https://github.com/adey-px/VanilaStackBoutique/issues"
   },
-  "homepage": "https://github.com/adey-px/AmaxEcommerceStore#readme",
+  "homepage": "https://github.com/adey-px/VanilaStackBoutique#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2"
   },
   "devDependencies": {
+    "eslint": "^8.45.0",
+    "eslint-plugin-import": "^2.27.5",
     "nodemon": "^2.0.22"
   }
 }
