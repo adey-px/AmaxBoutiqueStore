@@ -1,10 +1,10 @@
 /*
 Logic object for Product temlate
 */
-const Product = {
-  render: () => {
-    return `<h3>Product page</h3>`
-  }
+const ProductScreen = {
+	render: () => {
+		return `<h3>Product page</h3>`;
+	},
 };
 
-export default Product;
+export default ProductScreen;

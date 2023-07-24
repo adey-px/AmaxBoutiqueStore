@@ -100,6 +100,16 @@ header a:hover {
   font-size: 2rem;
 }
 
+.product-rating {
+  color: #ffc000;
+  font-size: 1.8rem;
+}
+
+.product-rating span:last-child {
+  color: #444;
+  font-size: 1.4rem;
+}
+
 /* footer area */
 footer {
   display: flex;

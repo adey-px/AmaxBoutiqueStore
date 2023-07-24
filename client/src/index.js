@@ -1,6 +1,6 @@
 'use strict';
-import Home from './screens/Home.js';
-import Product from './screens/Product.js';
+import HomeScreen from './screens/Home.js';
+import ProductScreen from './screens/Product.js';
 import { requestUrl } from './helpers/Utils.js';
 import { Error404 } from './helpers/Error404.js';
 /*
@@ -9,9 +9,9 @@ import { Error404 } from './helpers/Error404.js';
 
 // API - matched with their logic files
 const routes = {
-	'/': Home,
-	'/products': Home,
-	'/products/product/:id': Product,
+	'/': HomeScreen,
+	'/products': HomeScreen,
+	'/products/product/:id': ProductScreen,
 };
 
 // Route logic for request object in Utils.js

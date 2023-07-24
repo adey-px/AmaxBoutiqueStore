@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/index.css">
-    <title>Home - Amax Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/home.css">
+    <title>Home - Vanilla Store</title>
   </head>
 
   <body>
@@ -15,7 +16,7 @@
       <header>
         <div class="brand">
           <a href="/" class="logo">
-            Amax
+            Vanilla
           </a>
         </div>
         <span>Search Bar</span>
@@ -27,7 +28,7 @@
 
       <!-- main area -->
       <main id="container">
-        <!-- inserted from router.js
+        <!-- Dynamic data inserted from router.js
         <ul class="products">
           <li>
             <div class="product">
@@ -57,7 +58,11 @@
       </footer>
     </div>
 
-    <!-- set main.js as webpack compiler output file -->
+    <!-- Important:
+      set index.js as main entry file in client/package.json,
+      no script link in head above, its auto detect by webpack,
+      set below main.js for compiler output in browser/network.
+    -->
     <script src="main.js"></script>
   </body>
 

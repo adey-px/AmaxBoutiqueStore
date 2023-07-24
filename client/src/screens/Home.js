@@ -1,8 +1,9 @@
 'use strict';
 import axios from 'axios';
+import Rating from '../features/Rating';
 
 // Object for Home page render
-const Home = {
+const HomeScreen = {
 	render: async () => {
 		const response = await axios({
 			url: 'http://localhost:5000',
@@ -31,6 +32,9 @@ const Home = {
                 ${product.name}
               </a>
             </div>
+            <div class="product-rating">
+              ${Rating.render({ rating: product.ratings, review: `${product.reviews} reviews` })}
+            </div>
             <div class="product-brand">
               ${product.brand}
             </div>
@@ -46,8 +50,4 @@ const Home = {
 	},
 };
 
-/* 
-join() prevent coma ',' at end of each product in ui 
-*/
-// export to import in app.js
-export default Home;
+export default HomeScreen;
