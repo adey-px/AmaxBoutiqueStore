@@ -9,16 +9,26 @@ import { DATA } from './datastore/data.js';
 // import orderRouter from './routers/orderRouter';
 // import productRouter from './routers/productRouter';
 // import uploadRouter from './routers/uploadRouter';
-/*
- */
+
 const app = express();
 
 // Set data flow across diff ports
 app.use(cors());
 
-// Home api sending data to client
+// Homepage API aLLproducts sending data to client
 app.get('/', (req, res) => {
 	res.send(DATA.products);
+});
+
+// Product API sending product details to client
+// `req.params.id` is productID in client request
+app.get('/ph/product/:id', (req, res) => {
+	const product = DATA.products.find((product) => product._id === req.params.id);
+	if (product) {
+		res.send(product);
+	} else {
+		res.status(404).send({ message: 'Product is not found!' });
+	}
 });
 
 // parse incoming request

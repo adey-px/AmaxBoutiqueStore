@@ -1,7 +1,7 @@
 {
   "name": "vanila-client",
   "version": "1.0.0",
-  "description": "Ecommerce store with JavaScript stack",
+  "description": "Ecommerce store with pure JavaScript stack",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --watch-content-base --open"
@@ -9,7 +9,7 @@
   "author": "Oreofe Stephen",
   "license": "ISC",
   "devDependencies": {
-    "webpack": "^4.46.0",
+    "webpack": "^4.47.0",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.3"
   },

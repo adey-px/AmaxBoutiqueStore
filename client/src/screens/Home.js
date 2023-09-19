@@ -7,7 +7,9 @@ const HomeScreen = {
 	render: async () => {
 		const response = await axios({
 			url: 'http://localhost:5000',
-			headers: { 'Content-Type': 'application/json' },
+			headers: {
+				'Content-Type': 'application/json',
+			},
 		});
 
 		if (!response || response.statusText !== 'OK') {
@@ -24,11 +26,11 @@ const HomeScreen = {
 						(product) => `
           <li>
             <div class="product">
-              <a href="/#/products/product/${product._id}">
+              <a href="/#/ph/product/${product._id}">
                 <img src="${product.image}" alt="${product.name}" />
               </a>
             <div class="product-name">
-              <a href="/#/products/product/${product._id}">
+              <a href="/#/ph/product/${product._id}">
                 ${product.name}
               </a>
             </div>

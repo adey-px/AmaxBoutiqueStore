@@ -1,13 +1,15 @@
 /*
-Routing & Rendering logic for main.js
+Logic for Routing & Rendering defined in index.js
 */
-// get incoming request url 
+
+// Get url from incoming request
 export const requestUrl = () => {
 	const url = document.location.hash.toLowerCase();
 	const path = url.split('/');
 
-	/* divisions of route in main.js routes */
-  /* as in -eg- root/base/:id/verb */
+	/* route contents for routes in index.js */
+  /* as in `root/base/:id/verb` for each */
+	/* root is 1st str passed after home url */
 	return {
 		root: path[1],
 		base: path[2],

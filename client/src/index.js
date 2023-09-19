@@ -1,7 +1,7 @@
 'use strict';
 import HomeScreen from './screens/Home.js';
 import ProductScreen from './screens/Product.js';
-import { requestUrl } from './helpers/Utils.js';
+import { requestUrl } from './helpers/Routing.js';
 import { Error404 } from './helpers/Error404.js';
 /*
 - script link as type module in index.html
@@ -10,8 +10,7 @@ import { Error404 } from './helpers/Error404.js';
 // API - matched with their logic files
 const routes = {
 	'/': HomeScreen,
-	'/products': HomeScreen,
-	'/products/product/:id': ProductScreen,
+	'/ph/product/:id': ProductScreen,
 };
 
 // Route logic for request object in Utils.js
